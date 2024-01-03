@@ -8,10 +8,16 @@
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             padding: 20px;
+            margin: 0;
         }
         .game-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 创建两列 */
+            grid-gap: 20px; /* 设置列与列之间的间隔 */
             list-style: none;
             padding: 0;
+            max-width: 1000px; /* 或者你想要的任何最大宽度 */
+            margin: auto; /* 水平居中 */
         }
         .game-list li {
             padding: 10px;
@@ -24,7 +30,7 @@
             overflow: hidden; /* 防止图片溢出 */
         }
         .game-list li img {
-            width: 100px; /* 控制图片宽度 */
+            width: 150px; /* 控制图片宽度 */
             height: auto; /* 保持图片比例 */
             object-fit: cover; /* 覆盖容器，保持比例 */
             margin-right: 15px;
@@ -34,7 +40,12 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            display: flex;
+            align-items: center; /* 垂直居中 */
             flex-grow: 1; /* 让链接填充剩余空间 */
+        }
+        .game-list li a span {
+            font-size: 1.2em; /* 文字大小 */
         }
         .game-list li a:hover {
             color: #007bff;
@@ -45,48 +56,70 @@
     <h1>Q 宠怀旧游戏列表</h1>
     <ul class="game-list">
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103011840.png" alt="宠爱飞车">
-            <a href="car">宠爱飞车</a>
+            <a href="car/index.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103010116.png" alt="宠爱飞车">
+                <span>宠爱飞车</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103010530.png" alt="Q宠跆拳道">
-            <a href="fight">Q宠跆拳道</a>
+            <a href="jump/index.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103011212.png" alt="Q宠穿云">
+                <span>Q宠穿云</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103010741.png" alt="Q宠抓喜鹊">
-            <a href="bird">Q宠抓喜鹊</a>
+            <a href="fight/index.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103010530.png" alt="Q宠跆拳道">
+                <span>Q宠跆拳道</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103011212.png" alt="Q宠穿云">
-            <a href="jump">Q宠穿云</a>
+            <a href="bird/index.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103010741.png" alt="Q宠抓喜鹊">
+                <span>Q宠抓喜鹊</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103011400.png" alt="Q宠狩猎">
-            <a href="hunter">Q宠狩猎</a>
+            <a href="hunter/index.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/picgo/20240103011400.png" alt="Q宠狩猎">
+                <span>Q宠狩猎</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠抓鱼.jpg" alt="Q宠抓鱼">
-            <a href="others/fish.html">Q宠抓鱼</a>
+            <a href="others/fish.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠抓鱼.jpg" alt="Q宠抓鱼">
+                <span>Q宠抓鱼</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠保姆.jpg" alt="Q宠保姆">
-            <a href="others/housekeeper.html">Q宠保姆</a>
+            <a href="others/housekeeper.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠保姆.jpg" alt="Q宠保姆">
+                <span>Q宠保姆</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠搭积木.jpg" alt="Q宠搭积木">
-            <a href="others/lego.html">Q宠搭积木</a>
+            <a href="others/lego.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠搭积木.jpg" alt="Q宠搭积木">
+                <span>Q宠搭积木</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠端盘子.jpg" alt="Q宠端盘子">
-            <a href="others/disk.html">Q宠端盘子</a>
+            <a href="others/disk.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠端盘子.jpg" alt="Q宠端盘子">
+                <span>Q宠端盘子</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠挖矿.jpg" alt="Q宠挖矿">
-            <a href="others/minor.html">Q宠挖矿</a>
+            <a href="others/minor.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/Q宠挖矿.jpg" alt="Q宠挖矿">
+                <span>Q宠挖矿</span>
+            </a>
         </li>
         <li>
-            <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/企鹅的挑战.jpg" alt="企鹅的挑战">
-            <a href="others/challenge.html">企鹅的挑战</a>
+            <a href="others/challenge.html">
+                <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/企鹅的挑战.jpg" alt="企鹅的挑战">
+                <span>企鹅的挑战</span>
+            </a>
         </li>
     </ul>
 </body>

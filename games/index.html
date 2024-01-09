@@ -7,144 +7,183 @@
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
-            padding: 20px;
             margin: 0;
         }
-        .game-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 创建两列 */
-            grid-gap: 20px; /* 设置列与列之间的间隔 */
-            list-style: none;
-            padding: 0;
-            max-width: 1000px; /* 或者你想要的任何最大宽度 */
-            margin: auto; /* 水平居中 */
+        .app-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
         }
-        .game-list li {
+        .app-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            transition: box-shadow 0.3s ease;
+        }
+        .app-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .app-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .app-item .content {
             padding: 10px;
-            background: #fff;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            overflow: hidden; /* 防止图片溢出 */
         }
-        .game-list li img {
-            width: 150px; /* 控制图片宽度 */
-            height: auto; /* 保持图片比例 */
-            object-fit: cover; /* 覆盖容器，保持比例 */
-            margin-right: 15px;
-            border-radius: 5px;
+        .app-item h2 {
+            font-size: 1.1em;
+            margin: 0;
         }
-        .game-list li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: flex;
-            align-items: center; /* 垂直居中 */
-            flex-grow: 1; /* 让链接填充剩余空间 */
-        }
-        .game-list li a span {
-            font-size: 1.2em; /* 文字大小 */
-        }
-        .game-list li a:hover {
-            color: #007bff;
+        .app-item p {
+            font-size: 0.9em;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <h1>Q 宠怀旧游戏列表</h1>
-    <ul class="game-list">
-        <li>
+    <div class="app-container">
+        <!-- The list items have been wrapped with a div with the class "app-item" -->
+        <!-- And the content inside each item is wrapped with a div with the class "content" -->
+        <div class="app-item">
             <a href="pages/car.html">
                 <img src="covers/%E5%AE%A0%E7%88%B1%E9%A3%9E%E8%BD%A6.jpg" alt="宠爱飞车">
-                <span>宠爱飞车</span>
+                <div class="content">
+                    <h2>宠爱飞车</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Repeat for each game item, only showing one here for brevity -->
+        <!-- Q宠穿云 -->
+        <div class="app-item">
             <a href="pages/jump.html">
                 <img src="covers/Q%E5%AE%A0%E7%A9%BF%E4%BA%91.png" alt="Q宠穿云">
-                <span>Q宠穿云</span>
+                <div class="content">
+                    <h2>Q宠穿云</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- QQ跆拳道 -->
+        <div class="app-item">
             <a href="pages/fight.html">
                 <img src="covers/Q%E5%AE%A0%E8%B7%86%E6%8B%B3%E9%81%93.png" alt="Q宠跆拳道">
-                <span>QQ跆拳道</span>
+                <div class="content">
+                    <h2>QQ跆拳道</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- 搭鹊桥 -->
+        <div class="app-item">
             <a href="pages/bird.html">
                 <img src="covers/%E6%90%AD%E9%B9%8A%E6%A1%A5.png" alt="Q宠抓喜鹊">
-                <span>搭鹊桥</span>
+                <div class="content">
+                    <h2>搭鹊桥</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- QQ宠物狩猎场 -->
+        <div class="app-item">
             <a href="pages/hunter.html">
                 <img src="https://qiniu.wzhecnu.cn/PicBed6/QQPets/QQ%E5%AE%A0%E7%89%A9%E7%8B%A9%E7%8C%8E%E5%9C%BA.png" alt="Q宠狩猎">
-                <span>QQ宠物狩猎场</span>
+                <div class="content">
+                    <h2>QQ宠物狩猎场</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠抓鱼 -->
+        <div class="app-item">
             <a href="pages/fish.html">
                 <img src="covers/Q宠抓鱼.jpg" alt="Q宠抓鱼">
-                <span>Q宠抓鱼</span>
+                <div class="content">
+                    <h2>Q宠抓鱼</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠速配 -->
+        <div class="app-item">
             <a href="pages/pipe.html">
                 <img src="covers/Q宠速配.jpg" alt="Q宠速配">
-                <span>Q宠速配</span>
+                <div class="content">
+                    <h2>Q宠速配</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- 企鹅搭积木 -->
+        <div class="app-item">
             <a href="pages/lego.html">
                 <img src="covers/Q宠搭积木.jpg" alt="Q宠搭积木">
-                <span>企鹅搭积木</span>
+                <div class="content">
+                    <h2>企鹅搭积木</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- QQ端盘子 -->
+        <div class="app-item">
             <a href="pages/disk.html">
                 <img src="covers/Q宠端盘子.jpg" alt="Q宠端盘子">
-                <span>QQ端盘子</span>
+                <div class="content">
+                    <h2>QQ端盘子</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- QQ宠物挖矿 -->
+        <div class="app-item">
             <a href="pages/minor.html">
                 <img src="covers/Q宠挖矿.jpg" alt="Q宠挖矿">
-                <span>QQ宠物挖矿</span>
+                <div class="content">
+                    <h2>QQ宠物挖矿</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠摘星星 -->
+        <div class="app-item">
             <a href="pages/star.html">
-            <img src="covers/Q宠摘星星.jpg" alt="Q宠摘星星">
-            <span>Q宠摘星星</span>
+                <img src="covers/Q宠摘星星.jpg" alt="Q宠摘星星">
+                <div class="content">
+                    <h2>Q宠摘星星</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠守护使 -->
+        <div class="app-item">
             <a href="pages/angel.html">
-            <img src="covers/Q宠守护使.jpg" alt="Q宠守护使">
-            <span>Q宠守护使</span>
+                <img src="covers/Q宠守护使.jpg" alt="Q宠守护使">
+                <div class="content">
+                    <h2>Q宠守护使</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠邀你来找茬 -->
+        <div class="app-item">
             <a href="pages/different.html">
                 <img src="covers/Q宠邀你来找茬.jpg" alt="Q宠邀你来找茬">
-                <span>Q宠邀你来找茬</span>
+                <div class="content">
+                    <h2>Q宠邀你来找茬</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- Q宠保姆 -->
+        <div class="app-item">
             <a href="pages/housekeeper.html">
                 <img src="covers/Q宠保姆.jpg" alt="Q宠保姆">
-                <span>Q宠保姆</span>
+                <div class="content">
+                    <h2>Q宠保姆</h2>
+                </div>
             </a>
-        </li>
-        <li>
+        </div>
+        <!-- 企鹅的挑战 -->
+        <div class="app-item">
             <a href="pages/challenge.html">
                 <img src="covers/企鹅的挑战.jpg" alt="企鹅的挑战">
-                <span>企鹅的挑战</span>
+                <div class="content">
+                    <h2>企鹅的挑战</h2>
+                </div>
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </body>
 </html>

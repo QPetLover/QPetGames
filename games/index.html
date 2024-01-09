@@ -2,12 +2,14 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Q 宠怀旧游戏列表</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             margin: 0;
+        }
+        .page-title {
+            text-align: center;
         }
         .app-container {
             display: flex;
@@ -42,10 +44,16 @@
             font-size: 0.9em;
             color: #555;
         }
+        .app-item a {
+            text-decoration: none;
+        }
+        .app-item a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>Q 宠怀旧游戏列表</h1>
+    <h1 class="page-title">Q 宠怀旧游戏列表</h1>
     <div class="app-container">
         <!-- The list items have been wrapped with a div with the class "app-item" -->
         <!-- And the content inside each item is wrapped with a div with the class "content" -->

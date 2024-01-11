@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ 宠物</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .folder {
+        margin: 10px;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        background-color: #fff;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .folder:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .folder img {
+        max-width: 230px; /* Adjust this value as needed */
+        height: auto;
+        margin-bottom: 10px; /* Adds space between the image and the text */
+    }
+
+    .folder a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20px;
+        display: block; /* Makes the link fill the width of the folder for better clickability */
+        margin-top: 10px; /* Optional: Adds space above the text */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="folder" id="qqpet13">
+            <a href="QQPet13/index.html">
+                <img src="assets/imgs/qqpet13.png" alt="QQPet 网页在线">
+                <div>QQPet 网页在线</div>
+            </a>
+        </div>
+        <div class="folder" id="games">
+            <a href="games/index.html">
+                <img src="assets/imgs/qqgames.png" alt="QQ 宠物怀旧小游戏">
+                <div>QQ 宠物怀旧小游戏</div>
+            </a>
+        </div>
+        <div class="folder" id="reskin_games">
+            <a href="reskin_games/index.html">
+                <img src="assets/imgs/reskin_games.png" alt="QQ 宠物换壳游戏">
+                <div>QQ 宠物换壳游戏</div>
+            </a>
+        </div>
+        <div class="folder" id="adventure">
+            <a href="adventure/index.html">
+                <img src="assets/imgs/adventure.png" alt="QQ 宠物冒险岛">
+                <div>QQ 宠物冒险岛</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

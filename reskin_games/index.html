@@ -1,1 +1,83 @@
-Comming soon...
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ宠物换壳游戏列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .folder {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .folder:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        .folder img {
+            max-width: 230px; /* 调整为合适的值 */
+            height: auto;
+            margin-bottom: 10px; /* 在图片和文本之间添加间隔 */
+        }
+
+        .folder a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            display: block; /* 使链接填充整个folder的宽度，更易点击 */
+            margin-top: 10px; /* 可选：在文本上方添加间隔 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 游戏卡片 -->
+    <div class="folder">
+        <a href="pages.html?game=Q宠钓鱼">
+        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
+        <div>Q宠钓鱼</div>
+        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
+        <div>钓鱼小岛</div>
+        </a>
+    </div>
+    <div class="folder">
+        <a href="pages.html?game=Q宠钓鱼">
+        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
+        <div>原始游戏名称</div>
+        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
+        <div>套壳游戏名称</div>
+        </a>
+    </div>
+    <div class="folder">
+        <a href="pages.html?game=Q宠钓鱼">
+        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
+        <div>原始游戏名称</div>
+        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
+        <div>套壳游戏名称</div>
+        </a>
+    </div>
+
+    <!-- 可以复制更多的游戏卡片 -->
+    <!-- ... -->
+</div>
+
+</body>
+</html>

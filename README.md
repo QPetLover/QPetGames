@@ -23,21 +23,39 @@ git clone https://gitee.com/Rexzong/qqpet.git
 
 文件说明：
 
-- `games`：宠物社区经典游戏
+1. `games`：宠物社区经典游戏
   - `covers`：游戏封面图
   - `swf`：游戏 swf 文件
-  - `index.html`：游戏列表
-  - `pages.html`：游戏页面
-- `QQPets13`：宠物社区 Web 端，源于项目：https://github.com/ice-cream-headache/QQPet13
-- `reskin_games`：QQ 宠物的套壳平替游戏（待上传）
-- `adventure`：QQ 宠物冒险岛（待完善）
-- `ruffle`：Flash 支持库
+  - `games.json`：游戏列表记录文件
+  - `index.html, pages.html`：游戏相关页面
+
+2. `reskin_games`：QQ 宠物的换壳平替游戏
+   - `covers`：原版游戏封面图
+   - `reskin_covers`：换壳游戏封面图
+   - `swf`：游戏 swf 文件
+   - `games.json`：游戏列表记录文件
+   - `index.html, pages.html`：游戏相关页面
+
+3. `QQPets13`：宠物社区 Web 端，源于项目：https://github.com/ice-cream-headache/QQPet13
+
+4. `adventure`：QQ 宠物冒险岛（待完善）
+
+5. `ruffle`：Flash 支持库
 
 ## 贡献指南
 
+方式一，贡献仓库代码：
+
 ```bash
 git clone https://github.com/RexWzh/QQPet.git
+# 或者
+git clone https://gitee.com/Rexzong/qqpet.git
 ```
+
+按上一节给出的文件结构，添加游戏封面，游戏文件，并在 `games.json` 添加一条记录。
+
+方式二，搜集关联的游戏文件，通过贴吧或 QQ 群等方式分享，再由 [@RexWzh](https://github.com/RexWzh) 整理。
+
 
 ## 贡献者列表
 

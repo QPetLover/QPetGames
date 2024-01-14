@@ -1,8 +1,9 @@
 [
     {
         "title": "Q宠钓鱼",
-        "swfPath": "swf/QQ钓鱼.swf",
-        "img": "covers/Q宠钓鱼.jpg",
-        "reskin": "reskin/Q宠钓鱼.jpg"
+        "cover": "covers/Q宠钓鱼.jpg",
+        "reskin_covers": ["reskin/钓鱼小岛.jpg", "reskin/钓鱼小岛.jpg"],
+        "reskin_swfs": ["swf/QQ钓鱼.swf", "swf/QQ钓鱼.swf"],
+        "reskin_titles": ["钓鱼小岛", "钓鱼小岛"]
     }
 ]

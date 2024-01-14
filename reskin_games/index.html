@@ -10,6 +10,27 @@
             text-align: center;
         }
 
+        /* 返回按钮样式 */
+        .back-button {
+            display: inline-block;
+            padding: 5px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        /* 容器，卡片样式 */
         .container {
             display: flex;
             justify-content: center;
@@ -24,6 +45,7 @@
             background-color: #fff;
             text-align: center;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .folder:hover {
@@ -32,52 +54,142 @@
         }
 
         .folder img {
-            max-width: 230px; /* 调整为合适的值 */
+            max-width: 230px;
             height: auto;
-            margin-bottom: 10px; /* 在图片和文本之间添加间隔 */
+            margin-bottom: 10px;
         }
 
-        .folder a {
+        /* 弹出小窗样式 */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .overlay-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* 小窗内的卡片样式 */
+        .mini-folder {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+            max-width: 150px;
+        }
+
+        .mini-folder:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        .mini-folder img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .mini-folder a {
             text-decoration: none;
             color: #333;
+        }
+
+        .overlay-title {
+            text-align: center;
             font-size: 20px;
-            display: block; /* 使链接填充整个folder的宽度，更易点击 */
-            margin-top: 10px; /* 可选：在文本上方添加间隔 */
+            margin-bottom: 10px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <h1 class="page-title">Q 宠换壳游戏列表</h1>
-    <div class="container">
-    <!-- 游戏卡片 -->
-    <div class="folder">
-        <a href="pages.html?game=Q宠钓鱼">
-        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
-        <div>Q宠钓鱼</div>
-        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
-        <div>钓鱼小岛</div>
-        </a>
+    <div class="header">
+        <h1 class="page-title">QQ宠物换皮游戏列表</h1>
+        <!-- 返回主页按钮 -->
+        <a href="../index.html" class="back-button">返回主页</a>
     </div>
-    <div class="folder">
-        <a href="pages.html?game=Q宠钓鱼">
-        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
-        <div>原始游戏名称</div>
-        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
-        <div>套壳游戏名称</div>
-        </a>
-    </div>
-    <div class="folder">
-        <a href="pages.html?game=Q宠钓鱼">
-        <img src="covers/Q宠钓鱼.jpg" alt="原始游戏">
-        <div>原始游戏名称</div>
-        <img src="reskin/钓鱼小岛.jpg" alt="套壳游戏">
-        <div>套壳游戏名称</div>
-        </a>
+    <div class="container" id="app-container">
+        <!-- 游戏列表将在这里动态生成 -->
     </div>
 
-    <!-- 可以复制更多的游戏卡片 -->
-    <!-- ... -->
-</div>
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlay-content">
+            <!-- 动态内容将在这里插入 -->
+        </div>
+    </div>
 
+    <script>
+        // 加载游戏列表
+        fetch('games.json')
+            .then(response => response.json())
+            .then(games => {
+                const container = document.getElementById('app-container');
+                games.forEach(game => {
+                    const gameElement = createGameElement(game);
+                    container.appendChild(gameElement);
+                });
+            });
+
+        function createGameElement(game) {
+            const gameDiv = document.createElement('div');
+            gameDiv.className = 'folder';
+            gameDiv.onclick = function() { showOverlay(game); };
+            gameDiv.innerHTML = `
+                <img src="${game.cover}" alt="${game.title}">
+                <div>${game.title}</div>
+            `;
+            return gameDiv;
+        }
+
+        function showOverlay(game) {
+            const overlay = document.getElementById('overlay');
+            const overlayContent = document.getElementById('overlay-content');
+            let reskinContent = '';
+            for (let i = 0; i < game.reskin_titles.length; i++) {
+                reskinContent += `
+                    <div class="mini-folder">
+                        <a href="pages.html?game=${encodeURIComponent(game.reskin_titles[i])}">
+                            <img src="${game.reskin_covers[i]}" alt="${game.reskin_titles[i]}">
+                            <div>${game.reskin_titles[i]}</div>
+                        </a>
+                    </div>
+                `;
+            }
+            overlayContent.innerHTML = `
+                <div class="overlay-title">${game.title} 的换皮游戏</div>
+                <div class="overlay-cards">${reskinContent}</div>
+            `;
+            overlay.style.display = 'flex';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('overlay')) {
+                document.getElementById('overlay').style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,9 +1,93 @@
 [
     {
-        "title": "Q宠钓鱼",
-        "cover": "covers/Q宠钓鱼.jpg",
-        "reskin_covers": ["reskin/钓鱼小岛.jpg", "reskin/钓鱼小岛.jpg"],
-        "reskin_swfs": ["swf/QQ钓鱼.swf", "swf/QQ钓鱼.swf"],
-        "reskin_titles": ["钓鱼小岛", "钓鱼小岛"]
+        "title": "QQ钓鱼",
+        "cover": "covers/QQ钓鱼.jpg",
+        "reskin_covers": ["reskin/钓鱼小岛.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/QQ钓鱼.swf"],
+        "reskin_titles": ["钓鱼小岛"]
+    },
+    {
+        "title": "桌面冰壶球",
+        "cover": "covers/桌面冰壶球.jpg",
+        "reskin_covers": ["reskin/桌面冰壶球.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/桌面冰壶球.swf"],
+        "reskin_titles": ["桌面冰壶球"]
+    },
+    {
+        "title": "Q宠跳伞",
+        "cover": "covers/Q宠跳伞.jpg",
+        "reskin_covers": ["reskin/喜羊羊跳伞.jpg", "reskin/小羊跳伞.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/Q宠跳伞/喜羊羊跳伞.swf", "swf/夏帕海岸/Q宠跳伞/小羊跳伞.swf"],
+        "reskin_titles": ["喜羊羊跳伞", "小羊跳伞"]
+    },
+    {
+        "title": "火龙果的诱惑",
+        "cover": "covers/火龙果的诱惑.jpg",
+        "reskin_covers": ["reskin/割绳子.jpg"],
+        "reskin_swfs": ["swf/风语广场/割绳子.swf"],
+        "reskin_titles": ["割绳子"]
+    },
+    {
+        "title": "是勇士就下100层",
+        "cover": "covers/是勇士就下100层.jpg",
+        "reskin_covers": ["reskin/喜羊羊下100层.jpg", "reskin/小羊下100层.jpg"],
+        "reskin_swfs": ["swf/风语广场/下100层/喜羊羊下100层.swf", "swf/风语广场/下100层/小羊下100层.swf"],
+        "reskin_titles": ["喜羊羊下100层", "小羊下100层"]
+    },
+    {
+        "title": "捉娃娃",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/喜羊羊抓娃娃.jpg", "reskin/喜羊羊抓公仔.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/抓娃娃/喜羊羊抓娃娃.swf", "swf/夏帕海岸/抓娃娃/喜羊羊抓公仔.swf"],
+        "reskin_titles": ["喜羊羊抓娃娃", "喜羊羊抓公仔"]
+    },
+    {
+        "title": "忍者鹅",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/飞天忍者猫.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/飞天忍者猫.swf"],
+        "reskin_titles": ["飞天忍者猫"]
+    },
+    {
+        "title": "疯狂赛车",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/海绵宝宝汉堡赛车.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/海绵宝宝汉堡赛车.swf"],
+        "reskin_titles": ["海绵宝宝汉堡赛车"]
+    },
+    {
+        "title": "全垒打乌龟",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/灰太狼打乌龟.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/灰太狼打乌龟.swf"],
+        "reskin_titles": ["灰太狼打乌龟"]
+    },
+    {
+        "title": "夹豆子",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/夹豆子.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/夹豆子.swf"],
+        "reskin_titles": ["夹豆子"]
+    },
+    {
+        "title": "特技飞行",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/特技飞行.jpg"],
+        "reskin_swfs": ["swf/夏帕海岸/特技飞行.swf"],
+        "reskin_titles": ["特技飞行"]
+    },
+    {
+        "title": "亮亮-蔬菜分类",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/蔬菜分类.jpg"],
+        "reskin_swfs": ["swf/粉钻雪山/亮亮-隐藏游戏.swf"],
+        "reskin_titles": ["蔬菜分类"]
+    },
+    {
+        "title": "砸冰块",
+        "cover": "covers/QQpet.jpg",
+        "reskin_covers": ["reskin/砸冰块.jpg"],
+        "reskin_swfs": ["swf/粉钻雪山/砸冰块.swf"],
+        "reskin_titles": ["砸冰块"]
     }
 ]

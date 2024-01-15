@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>QQ宠物换壳游戏</title>
+    <title>QQ宠物换皮游戏</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -123,6 +123,33 @@
             margin-bottom: 10px;
             width: 100%;
         }
+        /* 消息框样式 */
+        .message-box {
+            background-color: #f9f3d2; /* 浅黄色背景，类似黄皮纸 */
+            border: 2px solid #8b4513; /* 深棕色边框 */
+            border-radius: 10px;
+            padding: 10px;
+            margin: 1% auto;
+            max-width: 1280px;
+            text-align: left;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            font-family: 'Times New Roman', Times, serif; /* 使用复古的字体样式 */
+        }
+
+        .message-box p {
+            font-size: 16px;
+            line-height: 1.3;
+            color: #333;
+        }
+
+        .message-box a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .message-box a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -131,6 +158,13 @@
         <!-- 返回主页按钮 -->
         <a href="../index.html" class="back-button">返回主页</a>
     </div>
+    <div class="message-box">
+        <p>By QQ宠物群友 二别列夫：</p>
+        <p>距离Q宠关服已有6年光景，但是互联网上总能找到Q宠的踪迹。其中Q宠的各大换皮游戏就是最好的例子，就算玩不到原汁原味的，有个换皮的做平替也是不错的选择。</p>
+        <p>本页在各大互联网资源平台找到了11款Q宠的换皮flash小游戏，它们都对应着Q宠社区某个场景内的游戏。
+            在玩法、配乐、素材等方面总有相似的地方...这些游戏为网站上已经下载过的离线单机swf文件，使用能读取swf文件的应用程序即可打开。
+            同时，也欢迎热爱Q宠的你一起来赛博考古，如果有在某些地方玩过换皮的小游戏，欢迎在<a href="https://tieba.baidu.com/p/8848239793">贴吧帖子</a>下方留言...</p>
+    </div> 
     <div class="container" id="app-container">
         <!-- 游戏列表将在这里动态生成 -->
     </div>

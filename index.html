@@ -3,78 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <title>QQ 宠物</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        .scroll-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .folder {
+            flex: 0 0 auto;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .folder:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        .folder img {
+            max-width: 230px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .folder a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5); /* 半透明的背景 */
+            color: #333;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%; /* 圆形按钮 */
+        }
+        /* 左右箭头的位置 */
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        .arrow {
+            z-index: 10; /* 确保箭头总在卡片上方 */
+            display: none; /* 默认不显示 */
+            /* 其他样式保持不变 */
+        }
+    </style>
 </head>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        text-align: center;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .folder {
-        margin: 10px;
-        padding: 20px;
-        border: 2px solid #ddd;
-        border-radius: 10px;
-        background-color: #fff;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .folder:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    }
-
-    .folder img {
-        max-width: 230px; /* Adjust this value as needed */
-        height: auto;
-        margin-bottom: 10px; /* Adds space between the image and the text */
-    }
-
-    .folder a {
-        text-decoration: none;
-        color: #333;
-        font-size: 20px;
-        display: block; /* Makes the link fill the width of the folder for better clickability */
-        margin-top: 10px; /* Optional: Adds space above the text */
-    }
-</style>
-
 <body>
-    <div class="container">
-        <div class="folder" id="qqpet13">
-            <a href="QQPet13/index.html">
-                <img src="assets/imgs/qqpet13.png" alt="QQPet 网页在线">
-                <div>QQPet 网页在线</div>
-            </a>
+    <div class="scroll-container">
+        <button class="arrow left-arrow">&lt;</button> <!-- 使用 < 符号 -->
+        <div class="container">
+            <div class="folder" id="qqpet13">
+                <a href="QQPet13/index.html">
+                    <img src="assets/imgs/qqpet13.png" alt="QQPet 网页在线">
+                    <div>QQPet 网页在线</div>
+                </a>
+            </div>
+            <div class="folder" id="games">
+                <a href="games/index.html">
+                    <img src="assets/imgs/qqgames.png" alt="QQ 宠物怀旧小游戏">
+                    <div>QQ 宠物怀旧小游戏</div>
+                </a>
+            </div>
+            <div class="folder" id="reskin_games">
+                <a href="reskin_games/index.html">
+                    <img src="assets/imgs/reskin_games.png" alt="QQ 宠物换壳游戏">
+                    <div>QQ 宠物换壳游戏</div>
+                </a>
+            </div>
+            <div class="folder" id="adventure">
+                <a href="adventure/index.html">
+                    <img src="assets/imgs/adventure.png" alt="QQ 宠物冒险岛">
+                    <div>QQ 宠物冒险岛</div>
+                </a>
+            </div>
         </div>
-        <div class="folder" id="games">
-            <a href="games/index.html">
-                <img src="assets/imgs/qqgames.png" alt="QQ 宠物怀旧小游戏">
-                <div>QQ 宠物怀旧小游戏</div>
-            </a>
-        </div>
-        <div class="folder" id="reskin_games">
-            <a href="reskin_games/index.html">
-                <img src="assets/imgs/reskin_games.png" alt="QQ 宠物换壳游戏">
-                <div>QQ 宠物换壳游戏</div>
-            </a>
-        </div>
-        <div class="folder" id="adventure">
-            <a href="adventure/index.html">
-                <img src="assets/imgs/adventure.png" alt="QQ 宠物冒险岛">
-                <div>QQ 宠物冒险岛</div>
-            </a>
-        </div>
+        <button class="arrow right-arrow">&gt;</button>
     </div>
+
+    <script>
+        // 检查是否需要显示箭头的函数
+        function checkArrows() {
+            var container = document.querySelector('.container');
+            var leftArrow = document.querySelector('.left-arrow');
+            var rightArrow = document.querySelector('.right-arrow');
+            if (container.scrollWidth > container.offsetWidth) {
+                leftArrow.style.display = 'block';
+                rightArrow.style.display = 'block';
+            } else {
+                leftArrow.style.display = 'none';
+                rightArrow.style.display = 'none';
+            }
+        }
+
+        // 监听窗口大小改变事件
+        window.addEventListener('resize', checkArrows);
+
+        // 初始化时检查一次
+        checkArrows();
+
+        // 剩余的事件监听器保持不变
+        document.querySelector('.left-arrow').addEventListener('click', function() {
+            document.querySelector('.container').scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        document.querySelector('.right-arrow').addEventListener('click', function() {
+            document.querySelector('.container').scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

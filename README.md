@@ -23,7 +23,7 @@ git clone https://gitee.com/Rexzong/qqpet.git
 
 文件说明：
 
-1. `games`：宠物社区经典游戏
+1. `classical_games`：宠物社区经典游戏
    - `covers`：游戏封面图
    - `swf`：游戏 swf 文件
    - `games.json`：游戏列表记录文件
@@ -36,9 +36,9 @@ git clone https://gitee.com/Rexzong/qqpet.git
    - `games.json`：游戏列表记录文件
    - `index.html, pages.html`：游戏相关页面
 
-3. `QQPets13`：宠物社区 Web 端，源于项目：https://github.com/ice-cream-headache/QQPet13
+3. `adventure`：QQ 宠物冒险岛
 
-4. `adventure`：QQ 宠物冒险岛（待完善）
+4. `QQPets13`：宠物社区 Web 端，源于项目：https://github.com/ice-cream-headache/QQPet13
 
 5. `ruffle`：Flash 支持库
 

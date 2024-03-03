@@ -75,22 +75,66 @@
         .arrow {
             z-index: 10; /* 确保箭头总在卡片上方 */
             display: none; /* 默认不显示 */
-            /* 其他样式保持不变 */
+        }
+        /* 按钮样式 */
+        .button {
+            display: inline-block;
+            padding: 5px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        /* 消息框样式 */
+        .message-box {
+            background-color: #f9f3d2; /* 浅黄色背景，类似黄皮纸 */
+            border: 2px solid #8b4513; /* 深棕色边框 */
+            border-radius: 10px;
+            padding: 10px;
+            margin: 1% auto;
+            max-width: 1280px;
+            text-align: left;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            font-family: 'Times New Roman', Times, serif; /* 使用复古的字体样式 */
+        }
+        .message-box p {
+            font-size: 16px;
+            line-height: 1.3;
+            color: #333;
+        }
+        .message-box a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .message-box a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <h1 class="page-title">QQ 宠物系列</h1>
+    <a href="onegame.html" class="button" target="_blank" >在线运行 Flash</a>
+    <div class="message-box"></div>
+    <p>随着 Adobe Flash Player 在 2020 年底停止更新和支持，那些曾经陪伴我们成长的经典 Flash 游戏和动画似乎注定要被时代遗忘。</p>
+    <p>从 4399 小游戏到 QQ 宠物，这些曾经的网络文化标志物，都因为 Flash 的消逝而逐渐淡出人们的视野。像 Q 宠这样在 2018 年就已经停服的游戏，许多人对它们的怀念之情愈加浓厚。而随着人工智能的发展，虚拟现实的兴起，相信未来会有更多的人希望重温这些经典。</p>
+    <p>以下网站托管于 Gitee/GitHub，资源来自 QQ 宠物的贴吧吧友和Q群群友，其中 Flash 游戏的“复苏”归功于 Ruffle 开源项目。</p>
+    </div> 
     <div class="scroll-container">
         <button class="arrow left-arrow">&lt;</button> <!-- 使用 < 符号 -->
         <div class="container">
             <div class="folder" id="qqpet13">
                 <a href="QQPet13/index.html">
                     <img src="assets/imgs/qqpet13.png" alt="QQPet 网页在线">
-                    <div>QQPet 网页在线</div>
+                    <div>QQPet 在线网页</div>
                 </a>
             </div>
             <div class="folder" id="games">
-                <a href="games/index.html">
+                <a href="classical_games/index.html">
                     <img src="assets/imgs/qqgames.png" alt="QQ 宠物怀旧小游戏">
                     <div>QQ 宠物怀旧小游戏</div>
                 </a>

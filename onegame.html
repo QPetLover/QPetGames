@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>在线运行 Flash</title>
+    <style>
+        /* 页面基本样式 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+        #upload_area {
+            width: 100%;
+            height: 100px;
+            border: 2px dashed #0087F7;
+            border-radius: 5px;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        #container {
+            width: 100%;
+            height: calc(100% - 110px); /* 减去上传区域的高度 */
+            justify-content: center;
+            align-items: center;
+        }
+        #container ruffle-player {
+            width: 100%;
+            height: 100%;
+        }
+        #start_game {
+            display: none; /* 初始时不显示 */
+            
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0087F7;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start_game:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="upload_area">拖拽或点击以选择Flash游戏文件</div>
+<div id="container"></div>
+
+<script src="//unpkg.com/@ruffle-rs/ruffle"></script>
+<script>
+    let selectedFile;
+
+    window.RufflePlayer.config = {
+        fontSources: ["https://cdn.wzhecnu.cn/adventure/myfont.swf"],
+        defaultFonts: {
+            sans: ["站酷快乐体2016修订版"],
+        },
+        scale: "showAll",
+        forceScale: true,
+    };
+
+    load_game = async () => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById('container');
+        container.innerHTML = ''; // 清空容器中可能存在的上一个实例
+        container.appendChild(player);
+        const url = URL.createObjectURL(selectedFile);
+        player.load(url);
+    };
+
+    document.getElementById('upload_area').addEventListener('click', function() {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = '.swf';
+        fileInput.onchange = e => {
+            const file = e.target.files[0];
+            if (file) {
+                selectedFile = file;
+                load_game();
+            }
+        };
+        fileInput.click();
+    });
+
+    document.getElementById('upload_area').addEventListener('dragover', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        event.dataTransfer.dropEffect = 'copy';
+    });
+
+    document.getElementById('upload_area').addEventListener('drop', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        const file = event.dataTransfer.files[0];
+        if (file) {
+            selectedFile = file;
+            load_game();
+        }
+    });
+</script>
+</body>
+</html>

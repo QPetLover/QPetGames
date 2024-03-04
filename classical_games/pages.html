@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>加载中...</title>
+    <style>
+        /* 确保html和body元素占满整个屏幕 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+        /* 使容器和Ruffle播放器全屏和自适应 */
+        #container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container ruffle-player {
+            flex-shrink: 0; /* 防止播放器被压缩 */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="//cdn.wzhecnu.cn/ruffle/ruffle.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameTitle = urlParams.get('game'); // 获取 "game" 参数
+        fetch('games.json')
+        .then(response => response.json())
+        .then(games => {
+            const game = games.find(g => g.title === gameTitle);
+            if (game) {
+                createGamePage(game.title, game.swfPath);
+            } else {
+                console.error('Game not found: ' + gameTitle);
+            }
+        });
+        function createGamePage(title, swfPath) {
+            window.RufflePlayer = window.RufflePlayer || {};
+            document.title = title; // 设置页面标题
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("container");
+            container.appendChild(player);
+            player.load(swfPath); // 加载对应的 SWF 文件
+        };
+    </script>
+</body>
+</html>

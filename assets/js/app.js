@@ -247,7 +247,7 @@ function renderDetail(id) {
       </aside>
       <article class="detail-card">
         <h2>资源对齐</h2>
-        <p>运行页优先使用本仓库随站部署的 SWF；经典小游戏保留旧 CDN URL，但在 source 未补齐前不开放直接运行，避免点击进入空白页。</p>
+        <p>运行页使用本仓库随站部署的 SWF；全部 32 个游戏都已归档并接入 Ruffle，经典游戏同时保留原 CDN URL 作为溯源记录。</p>
         <div class="detail-actions">
           ${game.playable ? `<a class="primary-button" href="#/play/${encodeURIComponent(game.id)}">启动 Ruffle</a>` : '<span class="primary-button is-disabled">等待补档</span>'}
           ${game.cdnUrl ? `<a class="ghost-button" href="${escapeHtml(game.cdnUrl)}" target="_blank" rel="noreferrer">原 CDN 链接</a>` : ''}

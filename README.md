@@ -63,8 +63,8 @@ The script copies only deployable site files to `_site/` and excludes `.git`, `.
 
 ## Resource Strategy
 
-- Playable reskin games use local SWF files in `reskin_games/swf/`.
-- Classic game entries keep the original CDN URLs and covers, but are marked as `待补档` until the SWF binaries are restored in the source archive or CDN.
+- Playable reskin games use local SWF files in `reskin_games/swf/` (Git LFS).
+- Classic games use local SWF files in `classical_games/swf/` (Git LFS), recovered from the wzhecnu server web root and archived in the source repository.
 - Ruffle v0.5.0 is self-hosted under `assets/vendor/ruffle/`; the old `cdn.wzhecnu.cn` endpoints are dead and no longer used.
 - New source packages from ChatQPet can be wired into `assets/data/games.json` once that repository appears and publishes a usable release.
 

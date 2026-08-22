@@ -1,10 +1,10 @@
 {
   "generatedAt": "2026-08-22",
   "sourceRepository": "https://github.com/QPetLover/awesome-qpet-games",
-  "adventureRepository": "https://github.com/QPetLover/qqpet-adventure",
-  "adventureSite": "https://qpetlover.cn/qqpet-adventure/",
+  "adventureRepository": "https://github.com/QPetLover/Adventure",
+  "adventureSite": "https://qpetlover.cn/Adventure/",
   "ruffleCdn": "https://cdn.wzhecnu.cn/ruffle/ruffle.js",
-  "fontSource": "https://qpetlover.cn/qqpet-adventure/myfont.swf",
+  "fontSource": "https://qpetlover.cn/Adventure/myfont.swf",
   "games": [
     {
       "id": "classic-001",
@@ -741,7 +741,7 @@
       "title": "QQ 宠物冒险岛",
       "description": "已从小游戏站拆出，使用独立仓库和独立 Pages 部署。",
       "cover": "assets/imgs/adventure.png",
-      "url": "https://qpetlover.cn/qqpet-adventure/",
+      "url": "https://qpetlover.cn/Adventure/",
       "kindLabel": "独立部署"
     }
   ]

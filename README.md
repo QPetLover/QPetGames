@@ -2,14 +2,14 @@
 
 QQ 宠物小游戏展示与在线运行站。
 
-This repository is now focused on deployable mini games. The raw resource archive lives in [`QPetLover/awesome-qpet-games`](https://github.com/QPetLover/awesome-qpet-games), and QQ 宠物冒险岛 is deployed separately through [`QPetLover/qqpet-adventure`](https://github.com/QPetLover/qqpet-adventure).
+This repository is now focused on deployable mini games. The raw resource archive lives in [`QPetLover/awesome-qpet-games`](https://github.com/QPetLover/awesome-qpet-games), and QQ 宠物冒险岛 (Adventure) is deployed separately through [`QPetLover/Adventure`](https://github.com/QPetLover/Adventure).
 
 ## What Changed
 
 - Rebuilt the old static pages into a modern static SPA.
 - Added a redesigned home page, searchable game catalog, game detail page, Ruffle player page, and local SWF test lab.
 - Kept legacy URLs (`classical_games/`, `reskin_games/`, `onegame.html`) as redirect/compatibility entries.
-- Moved the Adventure Island entry out of the mini-game catalog and redirected it to the independent deployment.
+- Moved the Adventure Island game out of this repository entirely; it now lives in [`QPetLover/Adventure`](https://github.com/QPetLover/Adventure) and deploys to https://qpetlover.cn/Adventure/.
 - Added `source/awesome-qpet-games` as a Git submodule so the deployment repo can track the canonical archive without copying every source file into the app layer.
 
 ## Repository Layout
@@ -23,7 +23,6 @@ classical_games/          # legacy compatibility pages + covers
 reskin_games/             # playable SWF resources and covers
 source/awesome-qpet-games # submodule pointing to the source archive
 QQPet13/                  # related web experience preserved from the old site
-adventure/                # migration page only; real deployment is separate
 ```
 
 ## Local Development

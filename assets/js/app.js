@@ -1,8 +1,8 @@
 const SITE = {
   title: 'QPet Games',
   sourceRepo: 'https://github.com/QPetLover/awesome-qpet-games',
-  adventureRepo: 'https://github.com/QPetLover/qqpet-adventure',
-  adventureSite: 'https://qpetlover.cn/qqpet-adventure/',
+  adventureRepo: 'https://github.com/QPetLover/Adventure',
+  adventureSite: 'https://qpetlover.cn/Adventure/',
 };
 
 const state = {
@@ -351,7 +351,7 @@ function configureRuffle() {
     letterbox: 'on',
     scale: 'showAll',
     forceScale: true,
-    fontSources: [state.data?.fontSource || 'https://qpetlover.cn/qqpet-adventure/myfont.swf'],
+    fontSources: [state.data?.fontSource || 'https://qpetlover.cn/Adventure/myfont.swf'],
     defaultFonts: {
       sans: ['站酷快乐体2016修订版'],
     },

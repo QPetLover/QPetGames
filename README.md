@@ -2,14 +2,14 @@
 
 QQ 宠物小游戏展示与在线运行站。
 
-This repository is now focused on deployable mini games. The raw resource archive lives in [`QPetLover/awesome-qpet-games`](https://github.com/QPetLover/awesome-qpet-games), and QQ 宠物冒险岛 (Adventure) is deployed separately through [`QPetLover/Adventure`](https://github.com/QPetLover/Adventure).
+This repository is now focused on deployable mini games. The raw resource archive lives in [`QPetLover/awesome-qpet-games`](https://github.com/QPetLover/awesome-qpet-games), and QQ 宠物冒险岛 (Adventure) is deployed separately through [`QPetLover/qpet-adventure`](https://github.com/QPetLover/qpet-adventure).
 
 ## What Changed
 
 - Rebuilt the old static pages into a modern static SPA.
 - Added a redesigned home page, searchable game catalog, game detail page, Ruffle player page, and local SWF test lab.
 - Kept legacy URLs (`classical_games/`, `reskin_games/`, `onegame.html`) as redirect/compatibility entries.
-- Moved the Adventure Island game out of this repository entirely; it now lives in [`QPetLover/Adventure`](https://github.com/QPetLover/Adventure) and deploys to https://qpetlover.cn/Adventure/.
+- Moved the Adventure Island game out of this repository entirely; it now lives in [`QPetLover/qpet-adventure`](https://github.com/QPetLover/qpet-adventure) and deploys to https://qpetlover.cn/qpet-adventure/ and publishes as the npm package `qpet-adventure`.
 - Added `source/awesome-qpet-games` as a Git submodule so the deployment repo can track the canonical archive without copying every source file into the app layer.
 
 ## Repository Layout
@@ -65,7 +65,7 @@ The script copies only deployable site files to `_site/` and excludes `.git`, `.
 
 - Playable reskin games use local SWF files in `reskin_games/swf/`.
 - Classic game entries keep the original CDN URLs and covers, but are marked as `待补档` until the SWF binaries are restored in the source archive or CDN.
-- Ruffle is loaded from the existing CDN endpoint.
+- Ruffle v0.5.0 is self-hosted under `assets/vendor/ruffle/`; the old `cdn.wzhecnu.cn` endpoints are dead and no longer used.
 - New source packages from ChatQPet can be wired into `assets/data/games.json` once that repository appears and publishes a usable release.
 
 ## Credits And Privacy

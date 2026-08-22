@@ -1,10 +1,9 @@
 {
   "generatedAt": "2026-08-22",
   "sourceRepository": "https://github.com/QPetLover/awesome-qpet-games",
-  "adventureRepository": "https://github.com/QPetLover/Adventure",
-  "adventureSite": "https://qpetlover.cn/Adventure/",
-  "ruffleCdn": "https://cdn.wzhecnu.cn/ruffle/ruffle.js",
-  "fontSource": "https://qpetlover.cn/Adventure/myfont.swf",
+  "adventureRepository": "https://github.com/QPetLover/qpet-adventure",
+  "adventureSite": "https://qpetlover.cn/qpet-adventure/",
+  "fontSource": "https://qpetlover.cn/qpet-adventure/myfont.swf",
   "games": [
     {
       "id": "classic-001",
@@ -739,10 +738,11 @@
     {
       "id": "adventure",
       "title": "QQ 宠物冒险岛",
-      "description": "已从小游戏站拆出，使用独立仓库和独立 Pages 部署。",
+      "description": "独立仓库 `QPetLover/qpet-adventure` 独立部署，同时作为 npm 包 `qpet-adventure` 发布。",
       "cover": "assets/imgs/adventure.png",
-      "url": "https://qpetlover.cn/Adventure/",
+      "url": "https://qpetlover.cn/qpet-adventure/",
       "kindLabel": "独立部署"
     }
-  ]
+  ],
+  "ruffleSource": "assets/vendor/ruffle/ruffle.js"
 }

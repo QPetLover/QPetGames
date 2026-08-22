@@ -1,8 +1,8 @@
 const SITE = {
   title: 'QPet Games',
   sourceRepo: 'https://github.com/QPetLover/awesome-qpet-games',
-  adventureRepo: 'https://github.com/QPetLover/Adventure',
-  adventureSite: 'https://qpetlover.cn/Adventure/',
+  adventureRepo: 'https://github.com/QPetLover/qpet-adventure',
+  adventureSite: 'https://qpetlover.cn/qpet-adventure/',
 };
 
 const state = {
@@ -351,7 +351,7 @@ function configureRuffle() {
     letterbox: 'on',
     scale: 'showAll',
     forceScale: true,
-    fontSources: [state.data?.fontSource || 'https://qpetlover.cn/Adventure/myfont.swf'],
+    fontSources: [state.data?.fontSource || 'https://qpetlover.cn/qpet-adventure/myfont.swf'],
     defaultFonts: {
       sans: ['站酷快乐体2016修订版'],
     },
@@ -366,7 +366,7 @@ function loadRuffle() {
   if (rufflePromise) return rufflePromise;
   rufflePromise = new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = state.data?.ruffleCdn || 'https://cdn.wzhecnu.cn/ruffle/ruffle.js';
+    script.src = state.data?.ruffleSource || 'assets/vendor/ruffle/ruffle.js';
     script.async = true;
     script.onload = resolve;
     script.onerror = () => reject(new Error('Ruffle 加载失败'));

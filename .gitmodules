@@ -1,0 +1,4 @@
+[submodule "source/awesome-qpet-games"]
+	path = source/awesome-qpet-games
+	url = https://github.com/QPetLover/awesome-qpet-games.git
+	branch = main

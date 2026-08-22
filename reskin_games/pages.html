@@ -1,64 +1,28 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>加载中...</title>
-    <style>
-        /* 确保html和body元素占满整个屏幕 */
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden; /* 隐藏滚动条 */
-        }
-        /* 使容器和Ruffle播放器全屏和自适应 */
-        #container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #container ruffle-player {
-            flex-shrink: 0; /* 防止播放器被压缩 */
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>游戏运行 · QPet Games</title>
 </head>
 <body>
-    <div id="container"></div>  
-    <script src="//cdn.wzhecnu.cn/ruffle/ruffle.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const gameTitle = urlParams.get('game'); // 获取 "game" 参数
-        fetch('games.json')
-        .then(response => response.json())
-        .then(games => {
-            // 查找包含指定 reskin title 的游戏
-            const game = games.find(g => g.reskin_titles.includes(gameTitle));
-            if (game) {
-                // 获取 reskin title 对应的 swfPath
-                const swfIndex = game.reskin_titles.indexOf(gameTitle);
-                const swfPath = game.reskin_swfs[swfIndex];
-                if (swfPath) {
-                    createGamePage(gameTitle, swfPath);
-                } else {
-                    console.error('SWF path not found for: ' + gameTitle);
-                }
-            } else {
-                console.error('Game not found: ' + gameTitle);
-            }
-        });
-
-        function createGamePage(title, swfPath) {
-            window.RufflePlayer = window.RufflePlayer || {};
-            document.title = title; // 设置页面标题
-            let ruffle = window.RufflePlayer.newest();
-            let player = ruffle.createPlayer();
-            let container = document.getElementById("container");
-            container.appendChild(player);
-            player.load(swfPath); // 加载对应的 SWF 文件
-        };
-    </script>
+  <p>正在跳转到新版游戏运行页...</p>
+  <p><a id="fallback" href="../index.html#/games?kind=reskin">返回 QPet Games</a></p>
+  <script>
+    const title = new URLSearchParams(location.search).get('game') || '';
+    fetch('../assets/data/games.json')
+      .then((response) => response.json())
+      .then((data) => {
+        const game = data.games.find((item) => item.title === title || item.baseTitle === title);
+        const target = game && game.playable
+          ? `../index.html#/play/${encodeURIComponent(game.id)}`
+          : `../index.html#/games?kind=reskin&search=${encodeURIComponent(title)}`;
+        document.getElementById('fallback').href = target;
+        location.replace(target);
+      })
+      .catch(() => {
+        location.replace(`../index.html#/games?kind=reskin&search=${encodeURIComponent(title)}`);
+      });
+  </script>
 </body>
 </html>

@@ -1,200 +1,35 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>QQ 宠物</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-        
-        .scroll-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .container {
-            display: flex;
-            overflow-x: auto;
-            justify-content: center;
-            scroll-behavior: smooth;
-        }
-
-        .folder {
-            flex: 0 0 auto;
-            margin: 10px;
-            padding: 20px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            background-color: #fff;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .folder:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        }
-
-        .folder img {
-            max-width: 230px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .folder a {
-            text-decoration: none;
-            color: #333;
-            font-size: 20px;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.5); /* 半透明的背景 */
-            color: #333;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 20px;
-            border-radius: 50%; /* 圆形按钮 */
-        }
-        /* 左右箭头的位置 */
-        .left-arrow {
-            left: 10px;
-        }
-
-        .right-arrow {
-            right: 10px;
-        }
-        .arrow {
-            z-index: 10; /* 确保箭头总在卡片上方 */
-            display: none; /* 默认不显示 */
-        }
-        /* 按钮样式 */
-        .button {
-            display: inline-block;
-            padding: 5px 20px;
-            margin: 5px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        /* 消息框样式 */
-        .message-box {
-            background-color: #f9f3d2; /* 浅黄色背景，类似黄皮纸 */
-            border: 2px solid #8b4513; /* 深棕色边框 */
-            border-radius: 10px;
-            padding: 10px;
-            margin: 1% auto;
-            max-width: 1280px;
-            text-align: left;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            font-family: 'Times New Roman', Times, serif; /* 使用复古的字体样式 */
-        }
-        .message-box p {
-            font-size: 16px;
-            line-height: 1.3;
-            color: #333;
-            text-indent: 20px;
-        }
-        .message-box a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        .message-box a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QQ 宠物小游戏在线展示与 Ruffle 运行站。">
+  <title>QPet Games · QQ 宠物小游戏馆</title>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#/home" aria-label="QPet Games 首页">
+        <span class="brand-mark">Q</span>
+        <span>QPet Games</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a class="nav-link" data-nav="home" href="#/home">首页</a>
+        <a class="nav-link" data-nav="games" href="#/games">小游戏</a>
+        <a class="nav-link" data-nav="lab" href="#/lab">SWF 试跑</a>
+        <a class="nav-link" href="https://qpetlover.cn/qqpet-adventure/" target="_blank" rel="noreferrer">冒险岛</a>
+      </nav>
+    </header>
 
-    <h1 class="page-title">QQ 宠物系列</h1>
-    <div class="message-box">
-    <p>随着 Adobe Flash Player 在 2020 年底停止更新和支持，那些曾经陪伴我们在电脑屏幕前度过无数欢乐时光的经典 Flash 游戏和动画似乎注定要被时代遗忘。从网页小游戏到悉心照料的 QQ 宠物，这些曾经的网络文化标志物，因 Flash 的消逝而逐渐淡出人们的视野。尤其像 Q 宠这样在 2018 年就已经停服的游戏，许多人对它们的怀念之情愈加浓厚。而随着人工智能的发展，虚拟现实的兴起，相信未来会有更多的人希望重温这些经典，重温那份纯粹的快乐和情感。
-    </p>
-    
-    <p>网站托管于 <a href="https://gitee.com/rexzong/qqpet" target="_blank">Gitee</a>/<a href="https://github.com/RexWzh/QQPet">GitHub</a>，资源来自 QQ 宠物的贴吧吧友和Q群群友。Flash 游戏的“复苏”则归功于 Ruffle 开源项目，相关的贴吧帖子：</p>
-    <ul>
-        <li>QQPet 在线网站：<a href="https://tieba.baidu.com/p/7987007885">抽空写了个 QQ 宠物在线运行 web 页面</a></li>
-        <li>QQ 宠物怀旧游戏：<a href="https://tieba.baidu.com/p/8592624524">qq宠物swf小游戏百度云</a></li>
-        <li>QQ 宠物冒险岛：<a href="https://tieba.baidu.com/p/8864193779">回忆向：经典中的经典：冒险岛预告片它来了</a></li>
-        <li>QQ 宠物换壳游戏：<a href="https://tieba.baidu.com/p/8848239793">【回忆项】寻找QQ宠物的换皮游戏</a></li>
-        <li>网站本身：<a href="https://tieba.baidu.com/p/8858679860">【回忆向】宠物社区经典游戏与资源，重温那段美好时光</a></li>
-    </ul>
-    </div>
-    <a href="onegame.html" class="button" target="_blank" >在线运行 Flash</a>
-    <div class="scroll-container">
-        <button class="arrow left-arrow">&lt;</button> <!-- 使用 < 符号 -->
-        <div class="container">
-            <div class="folder" id="qqpet13">
-                <a href="QQPet13/index.html">
-                    <img src="assets/imgs/qqpet13.png" alt="QQPet 网页在线">
-                    <div>QQPet 在线网页</div>
-                </a>
-            </div>
-            <div class="folder" id="games">
-                <a href="classical_games/index.html">
-                    <img src="assets/imgs/qqgames.png" alt="QQ 宠物怀旧小游戏">
-                    <div>QQ 宠物怀旧小游戏</div>
-                </a>
-            </div>
-            <div class="folder" id="reskin_games">
-                <a href="reskin_games/index.html">
-                    <img src="assets/imgs/reskin_games.png" alt="QQ 宠物换壳游戏">
-                    <div>QQ 宠物换壳游戏</div>
-                </a>
-            </div>
-            <div class="folder" id="adventure">
-                <a href="adventure/index.html">
-                    <img src="assets/imgs/adventure.png" alt="QQ 宠物冒险岛">
-                    <div>QQ 宠物冒险岛</div>
-                </a>
-            </div>
-        </div>
-        <button class="arrow right-arrow">&gt;</button>
-    </div>
+    <main id="view" aria-live="polite">
+      <div class="skeleton">正在打开 QQ 宠物小游戏馆...</div>
+    </main>
 
-    <script>
-        // 检查是否需要显示箭头的函数
-        function checkArrows() {
-            var container = document.querySelector('.container');
-            var leftArrow = document.querySelector('.left-arrow');
-            var rightArrow = document.querySelector('.right-arrow');
-            if (container.scrollWidth > container.offsetWidth) {
-                leftArrow.style.display = 'block';
-                rightArrow.style.display = 'block';
-            } else {
-                leftArrow.style.display = 'none';
-                rightArrow.style.display = 'none';
-            }
-        }
-
-        // 监听窗口大小改变事件
-        window.addEventListener('resize', checkArrows);
-
-        // 初始化时检查一次
-        checkArrows();
-
-        // 剩余的事件监听器保持不变
-        document.querySelector('.left-arrow').addEventListener('click', function() {
-            document.querySelector('.container').scrollBy({ left: -300, behavior: 'smooth' });
-        });
-
-        document.querySelector('.right-arrow').addEventListener('click', function() {
-            document.querySelector('.container').scrollBy({ left: 300, behavior: 'smooth' });
-        });
-    </script>
+    <footer class="footer">
+      <p>QPet Games 是非官方怀旧整理项目。小游戏资源优先来自本仓库和 <a href="https://github.com/QPetLover/awesome-qpet-games" target="_blank" rel="noreferrer">awesome-qpet-games</a>；QQ 宠物冒险岛已迁移到 <a href="https://github.com/QPetLover/qqpet-adventure" target="_blank" rel="noreferrer">qqpet-adventure</a> 独立仓库。</p>
+    </footer>
+  </div>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>

@@ -11,20 +11,23 @@
       "baseTitle": "Q 宠守护使",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠守护使.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E5%AE%88%E6%8A%A4%E4%BD%BF.swf",
+      "swf": "classical_games/swf/Q宠守护使.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E5%AE%88%E6%8A%A4%E4%BD%BF.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠守护使.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 665215,
+      "sha256": "6ef3e55d86431714fe8d1da849a37fb5c08844a44accdc469296fe0118377654"
     },
     {
       "id": "classic-002",
@@ -32,20 +35,23 @@
       "baseTitle": "搭鹊桥",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/搭鹊桥.png",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E6%8A%93%E5%96%9C%E9%B9%8A.swf",
+      "swf": "classical_games/swf/QQ抓喜鹊.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E6%8A%93%E5%96%9C%E9%B9%8A.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/QQ抓喜鹊.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 797281,
+      "sha256": "94007c475f91fed70b35b848b7288faf8d7415cd9f0f0b04533bcba03d8fd3c6"
     },
     {
       "id": "classic-003",
@@ -53,20 +59,23 @@
       "baseTitle": "QQ 飞车",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/宠爱飞车.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E9%A3%9E%E8%BD%A6.swf",
+      "swf": "classical_games/swf/QQ飞车.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E9%A3%9E%E8%BD%A6.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/QQ飞车.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 849248,
+      "sha256": "c8ad6b998a57f343ddf9213ca61717bdf0ceb1061b794ca63632a9b4d9f8dd1f"
     },
     {
       "id": "classic-004",
@@ -74,20 +83,23 @@
       "baseTitle": "企鹅的挑战",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/企鹅的挑战.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/%E4%BC%81%E9%B9%85%E7%9A%84%E6%8C%91%E6%88%98.swf",
+      "swf": "classical_games/swf/企鹅的挑战.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/%E4%BC%81%E9%B9%85%E7%9A%84%E6%8C%91%E6%88%98.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/企鹅的挑战.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1592613,
+      "sha256": "11380ec505e2edcc54e00646e487be91bea6fe627199923681b5cef96197aace"
     },
     {
       "id": "classic-005",
@@ -95,20 +107,23 @@
       "baseTitle": "Q宠邀你来找茬",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠邀你来找茬.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E9%82%80%E4%BD%A0%E6%9D%A5%E6%89%BE%E8%8C%AC.swf",
+      "swf": "classical_games/swf/Q宠邀你来找茬.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E9%82%80%E4%BD%A0%E6%9D%A5%E6%89%BE%E8%8C%AC.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠邀你来找茬.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1936532,
+      "sha256": "660a57fbfd080557147b980969c1904403bb9ec491e67d392644708b34b4c23f"
     },
     {
       "id": "classic-006",
@@ -116,20 +131,23 @@
       "baseTitle": "QQ端盘子",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠端盘子.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E7%AB%AF%E7%9B%98%E5%AD%90.swf",
+      "swf": "classical_games/swf/Q宠端盘子.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E7%AB%AF%E7%9B%98%E5%AD%90.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠端盘子.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 855766,
+      "sha256": "88efe57892ef034a946571ddb794f738ed9e2b8ccffb9b5e50200ebb3c3b6131"
     },
     {
       "id": "classic-007",
@@ -137,20 +155,23 @@
       "baseTitle": "QQ跆拳道",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠跆拳道.png",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E8%B7%86%E6%8B%B3%E9%81%93.swf",
+      "swf": "classical_games/swf/QQ跆拳道.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E8%B7%86%E6%8B%B3%E9%81%93.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/QQ跆拳道.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 3270599,
+      "sha256": "6df89818db38d2748b7185df470627f0cc013e0410c07e605b76148c4d77b9f8"
     },
     {
       "id": "classic-008",
@@ -158,20 +179,23 @@
       "baseTitle": "Q 宠抓鱼",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠抓鱼.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%8A%93%E9%B1%BC.swf",
+      "swf": "classical_games/swf/Q宠抓鱼.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%8A%93%E9%B1%BC.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠抓鱼.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 701876,
+      "sha256": "515b184d8e53ce556ee0c0f4c12b0f433762a9f0464b94f2c65342c3b5bda2e3"
     },
     {
       "id": "classic-009",
@@ -179,20 +203,23 @@
       "baseTitle": "Q宠保姆",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠保姆.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E4%BF%9D%E5%A7%86.swf",
+      "swf": "classical_games/swf/Q宠保姆.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E4%BF%9D%E5%A7%86.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠保姆.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 784818,
+      "sha256": "5068d5488c397e5a6272c8c8e62ae28db6347780c9178fcfea3dae646fa076bc"
     },
     {
       "id": "classic-010",
@@ -200,20 +227,23 @@
       "baseTitle": "企鹅搭积木",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠搭积木.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%90%AD%E7%A7%AF%E6%9C%A8.swf",
+      "swf": "classical_games/swf/Q宠搭积木.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%90%AD%E7%A7%AF%E6%9C%A8.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠搭积木.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 924672,
+      "sha256": "56b57345d99360c4c0a1f41586f3b07cbe81475f07edf8751993d61a6d7d1539"
     },
     {
       "id": "classic-011",
@@ -221,20 +251,23 @@
       "baseTitle": "QQ宠物狩猎场",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠守猎.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E5%AE%9D%E5%AE%9D%E5%AE%88%E7%8C%8E.swf",
+      "swf": "classical_games/swf/QQ宝宝守猎.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E5%AE%9D%E5%AE%9D%E5%AE%88%E7%8C%8E.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/QQ宝宝守猎.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1232553,
+      "sha256": "586642f95a64d87c30076988d600563a85a4643ffe5fad5211a462617e8fd23b"
     },
     {
       "id": "classic-012",
@@ -242,20 +275,23 @@
       "baseTitle": "QQ企鹅穿云",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠穿云.png",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E4%BC%81%E9%B9%85%E7%A9%BF%E4%BA%91.swf",
+      "swf": "classical_games/swf/QQ企鹅穿云.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E4%BC%81%E9%B9%85%E7%A9%BF%E4%BA%91.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/QQ企鹅穿云.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 2789909,
+      "sha256": "1f02ce6d9affb433e95c09fd8bcd05653b1cfb9938afa1e04c0cdfe5eeb66da9"
     },
     {
       "id": "classic-013",
@@ -263,20 +299,23 @@
       "baseTitle": "QQ宠物挖矿",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠挖矿.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%8C%96%E7%9F%BF.swf",
+      "swf": "classical_games/swf/Q宠挖矿.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E6%8C%96%E7%9F%BF.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠挖矿.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1806518,
+      "sha256": "66494abc71e425f8390fdcd9c3d40bbaa4236412be2a07e63c381ea6b3808291"
     },
     {
       "id": "classic-014",
@@ -284,20 +323,23 @@
       "baseTitle": "Q宠速配",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠速配.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E9%80%9F%E9%85%8D.swf",
+      "swf": "classical_games/swf/Q宠速配.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/Q%E5%AE%A0%E9%80%9F%E9%85%8D.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠速配.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 141720,
+      "sha256": "654f01b4e6a48782ffe10be1750f321e7570d9a96133f1644094017d47b1ab94"
     },
     {
       "id": "classic-015",
@@ -305,20 +347,23 @@
       "baseTitle": "Q 宠摘星星",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/Q宠摘星星.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/QQ%E6%8A%93%E5%96%9C%E9%B9%8A.swf",
+      "swf": "classical_games/swf/Q宠摘星星.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/QQ%E6%8A%93%E5%96%9C%E9%B9%8A.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/Q宠摘星星.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 598472,
+      "sha256": "87e573aad836d4ea3ff168f55c9ba9128edf8b1a651382bc875f6be3550c2fac"
     },
     {
       "id": "classic-016",
@@ -326,20 +371,23 @@
       "baseTitle": "满天星",
       "kind": "classic",
       "kindLabel": "经典小游戏",
-      "status": "missing-source",
-      "statusLabel": "待补档",
-      "playable": false,
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
       "cover": "classical_games/covers/满天星.jpg",
-      "swf": "https://cdn.wzhecnu.cn/classical_games/%E6%BB%A1%E5%A4%A9%E6%98%9F.swf",
+      "swf": "classical_games/swf/满天星.swf",
       "cdnUrl": "https://cdn.wzhecnu.cn/classical_games/%E6%BB%A1%E5%A4%A9%E6%98%9F.swf",
-      "assetSource": "QPetGames classical_games/games.json; original CDN URL currently unavailable",
-      "sourceRepoPath": "",
-      "notes": "保留旧 CDN 原始链接和封面；当前未在仓库内找到可运行 SWF，等待 source 补档后启用。",
+      "assetSource": "Recovered from wzhecnu server /var/www/cdn/classical_games on 2026-08-22; archived in awesome-qpet-games.",
+      "sourceRepoPath": "source/awesome-qpet-games/archive/games/classic/swf/满天星.swf",
+      "notes": "本地 SWF 已归档并接入 Ruffle 运行页。",
       "tags": [
         "经典",
-        "待补档",
-        "CDN 原链接"
-      ]
+        "CDN 原链接",
+        "经典",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1700168,
+      "sha256": "d0fad936906e8f52b70468948d454638f61c9f1de449ca2d5ba0ec6cca7af77f"
     },
     {
       "id": "reskin-001-01",

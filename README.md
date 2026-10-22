@@ -56,10 +56,13 @@ git submodule update --init --recursive
 The deployment workflow runs:
 
 ```bash
+git lfs pull
 python3 tools/build_static_site.py
 ```
 
-The script copies only deployable site files to `_site/` and excludes `.git`, `.github`, `source/`, and other development-only files. This keeps the large source archive out of the Pages artifact while still preserving the submodule relationship in Git.
+The script checks every playable SWF against the size and SHA-256 recorded in the catalog before and after copying. It rejects unresolved Git LFS pointers, missing covers, duplicate game IDs, and missing/invalid Ruffle WebAssembly files. It copies deployable site files to `_site/` and excludes `.git`, `.github`, `source/`, and development directories. The Pages workflow checks out LFS files automatically.
+
+The published site is [qpetlover.cn/QPetGames](https://qpetlover.cn/QPetGames/). A direct comparison link uses the catalog's stable ID, for example [Q宠速配](https://qpetlover.cn/QPetGames/#/play/classic-014). Relative asset paths keep the same build usable under the GitHub Pages repository path and a local server.
 
 ## Resource Strategy
 

@@ -3,13 +3,14 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_site"
-EXCLUDED_DIRS = {".git", ".github", "_site", "source", "tools", "node_modules"}
+EXCLUDED_DIRS = {".git", ".github", "_site", "source", "tools", "node_modules", "__pycache__"}
 EXCLUDED_FILES = {".DS_Store"}
 REQUIRED_FILES = [
     "index.html",
@@ -45,24 +46,49 @@ def copy_site() -> int:
     return copied
 
 
-def validate() -> tuple[int, int]:
+def validate(root: Path) -> tuple[int, int]:
     for rel in REQUIRED_FILES:
-        if not (OUT / rel).exists():
-            raise SystemExit(f"missing required file in build output: {rel}")
+        if not (root / rel).is_file():
+            raise SystemExit(f"missing required site file: {rel}")
 
-    data = json.loads((OUT / "assets/data/games.json").read_text(encoding="utf-8"))
+    data = json.loads((root / "assets/data/games.json").read_text(encoding="utf-8"))
     games = data.get("games", [])
+    ids = [game["id"] for game in games]
+    if len(set(ids)) != len(ids):
+        raise SystemExit("duplicate game id: each #/play/<id> must identify one game")
+    for game in games:
+        for key in ("cover", "originalCover"):
+            if game.get(key) and not (root / game[key]).is_file():
+                raise SystemExit(f"missing {key}: {game['id']} -> {game[key]}")
     playable = [game for game in games if game.get("playable")]
     for game in playable:
-        swf = OUT / game["swf"]
-        if not swf.exists():
+        swf = root / game["swf"]
+        if not swf.is_file():
             raise SystemExit(f"playable game points to missing SWF: {game['id']} -> {game['swf']}")
+        content = swf.read_bytes()
+        if content.startswith(b"version https://git-lfs.github.com/spec/v1"):
+            raise SystemExit(f"Git LFS pointer instead of game: {game['swf']}; run git lfs pull before building")
+        if len(content) < 8 or content[:3] not in (b"FWS", b"CWS", b"ZWS"):
+            raise SystemExit(f"invalid SWF header: {game['swf']}")
+        if len(content) != game.get("sizeBytes"):
+            raise SystemExit(f"SWF size differs from source catalog: {game['swf']}")
+        if hashlib.sha256(content).hexdigest() != game.get("sha256"):
+            raise SystemExit(f"SWF SHA-256 differs from source catalog: {game['swf']}")
+
+    ruffle_path = root / data["ruffleSource"]
+    if not ruffle_path.is_file():
+        raise SystemExit(f"missing Ruffle entry point: {data['ruffleSource']}")
+    wasm_files = list(ruffle_path.parent.glob("*.wasm"))
+    if not wasm_files or any(path.read_bytes()[:4] != b"\0asm" for path in wasm_files):
+        raise SystemExit("Ruffle WebAssembly files are missing or invalid")
     return len(games), len(playable)
 
 
 def main() -> None:
+    # Fail before replacing a good build if Git LFS has not hydrated the checkout.
+    validate(ROOT)
     copied = copy_site()
-    total, playable = validate()
+    total, playable = validate(OUT)
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     print(f"built _site with {copied} files; games={total}; playable={playable}")
 

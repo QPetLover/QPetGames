@@ -121,7 +121,7 @@ function renderHome() {
       <article class="section-card">
         <p class="eyebrow">Source</p>
         <h2>资源仓库作源头</h2>
-        <p>本仓库通过 submodule 引用 `awesome-qpet-games`，后续 ChatQPet 发版后可继续替换成更完整的资源源。</p>
+        <p>本仓库通过 submodule 引用 <code>awesome-qpet-games</code>，后续 ChatQPet 发版后可继续替换成更完整的资源源。</p>
         <a class="ghost-button" href="${SITE.sourceRepo}" target="_blank" rel="noreferrer">查看 awesome-qpet-games</a>
       </article>
       <article class="section-card">

@@ -28,6 +28,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Check application syntax
+        run: node --check assets/js/app.js
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build static site

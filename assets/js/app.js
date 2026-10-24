@@ -32,6 +32,7 @@ function encodePath(path = '') {
 }
 
 function sourceHref(game) {
+  if (game.sourceUrl) return game.sourceUrl;
   if (!game.sourceRepoPath) return SITE.sourceRepo;
   const path = game.sourceRepoPath.replace(/^source\/awesome-qpet-games\//, '');
   return `${SITE.sourceRepo}/blob/main/${encodePath(path)}`;
@@ -157,6 +158,7 @@ function renderCatalog() {
         ${filterButton('playable', '可运行')}
         ${filterButton('reskin', '换壳平替')}
         ${filterButton('classic', '经典索引')}
+        ${filterButton('archive', '社区补档')}
         ${filterButton('missing', '待补档')}
       </div>
     </section>
@@ -247,11 +249,11 @@ function renderDetail(id) {
       </aside>
       <article class="detail-card">
         <h2>资源对齐</h2>
-        <p>运行页使用本仓库随站部署的 SWF；全部 32 个游戏都已归档并接入 Ruffle，经典游戏同时保留原 CDN URL 作为溯源记录。</p>
+        <p>运行页使用本仓库随站部署的 SWF；目前归档 ${state.games.length} 个游戏，经典游戏保留原 CDN URL，社区补档另列来源与版本说明。</p>
         <div class="detail-actions">
           ${game.playable ? `<a class="primary-button" href="#/play/${encodeURIComponent(game.id)}">启动 Ruffle</a>` : '<span class="primary-button is-disabled">等待补档</span>'}
           ${game.cdnUrl ? `<a class="ghost-button" href="${escapeHtml(game.cdnUrl)}" target="_blank" rel="noreferrer">原 CDN 链接</a>` : ''}
-          <a class="ghost-button" href="${sourceHref(game)}" target="_blank" rel="noreferrer">source 归档</a>
+          <a class="ghost-button" href="${escapeHtml(sourceHref(game))}" target="_blank" rel="noreferrer">source 归档</a>
           <a class="ghost-button" href="#/games">返回列表</a>
         </div>
         <div class="notice" style="margin-top: 22px;">
@@ -285,6 +287,7 @@ function renderPlayer(id) {
           <h2>${escapeHtml(game.title)}</h2>
           <p class="muted">原型：${escapeHtml(game.baseTitle)}</p>
           <p class="muted">资源：${escapeHtml(game.swf)}</p>
+          ${game.kind === 'archive' ? `<p class="muted">${escapeHtml(game.notes)}</p>` : ''}
           <div class="player-actions">
             <a class="ghost-button" href="#/game/${encodeURIComponent(game.id)}">详情</a>
             <a class="ghost-button" href="${escapeHtml(game.swf)}" download>下载 SWF</a>
@@ -296,7 +299,7 @@ function renderPlayer(id) {
     </section>
   `;
 
-  bootRuffle(game.swf, 'ruffle-container');
+  bootRuffle(game.swf, 'ruffle-container', game);
 }
 
 function renderLab() {
@@ -375,15 +378,20 @@ function loadRuffle() {
   return rufflePromise;
 }
 
-async function bootRuffle(url, containerId) {
+async function bootRuffle(url, containerId, game) {
   const container = document.getElementById(containerId);
   try {
     await loadRuffle();
     const ruffle = window.RufflePlayer.newest();
     const player = ruffle.createPlayer();
+    // These fixed comparison files use their own embedded/device fonts, as in
+    // the isolated baseline. The adventure font is unrelated to their source.
+    if (game?.kind === 'archive') {
+      player.ruffle().config = {fontSources: [], defaultFonts: {}};
+    }
     container.innerHTML = '';
     container.appendChild(player);
-    await player.load(url);
+    await player.load(game?.parameters ? {url, parameters: game.parameters} : url);
   } catch (error) {
     container.innerHTML = `<div class="notice">${escapeHtml(error.message || '加载失败')}。请检查 CDN、Ruffle 或 SWF 路径。</div>`;
   }

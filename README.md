@@ -68,6 +68,7 @@ The published site is [qpetlover.cn/QPetGames](https://qpetlover.cn/QPetGames/).
 
 - Playable reskin games use local SWF files in `reskin_games/swf/` (Git LFS).
 - Classic games use local SWF files in `classical_games/swf/` (Git LFS), recovered from the wzhecnu server web root and archived in the source repository.
+- Three additional community backups (宠爱森林、宠爱QQ堂、地下城与勇士 · Q宠版) live in `community_games/`, with fixed hashes, provenance, and host initialization documented in [community_games/README.md](community_games/README.md). They are separate from the existing classic and reskin indexes.
 - Ruffle v0.5.0 is self-hosted under `assets/vendor/ruffle/`; the old `cdn.wzhecnu.cn` endpoints are dead and no longer used.
 - New source packages from ChatQPet can be wired into `assets/data/games.json` once that repository appears and publishes a usable release.
 

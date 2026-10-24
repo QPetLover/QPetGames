@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22",
+  "generatedAt": "2026-10-24",
   "sourceRepository": "https://github.com/QPetLover/awesome-qpet-games",
   "adventureRepository": "https://github.com/QPetLover/qpet-adventure",
   "adventureSite": "https://qpetlover.cn/qpet-adventure/",
@@ -772,6 +772,78 @@
       ],
       "sizeBytes": 928581,
       "sha256": "224e0177a8949b41be067286e9bad6ee1832f2f9ccaf09c1374553064fb0f426"
+    },
+    {
+      "id": "happy-forest",
+      "title": "宠爱森林",
+      "baseTitle": "宠爱森林",
+      "kind": "archive",
+      "kindLabel": "社区文件补档",
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
+      "cover": "community_games/covers/forest.png",
+      "swf": "community_games/swf/forest.swf",
+      "sourceUrl": "https://github.com/xuemian168/qqpet_automation/blob/main/qq-pet-macos/src/assets/game/Q%E5%AE%A0%E7%88%B1%E6%A3%AE%E6%9E%97.swf",
+      "assetSource": "Community backup, recovered 2026-10-23; source bytes fixed by SHA-256. See community_games/README.md.",
+      "notes": "社区留存的 SWF，固定此版本用于原生迁移对照；尚未证明与历史官方原件逐字节一致。",
+      "tags": [
+        "社区补档",
+        "QQ宠物",
+        "固定版本",
+        "本地 SWF"
+      ],
+      "sizeBytes": 1044839,
+      "sha256": "cfc82b0fda9e38bf48151af64422d89e904b32a772c7863fc048ca88c5fe1e1b"
+    },
+    {
+      "id": "happy-qqtang",
+      "title": "宠爱QQ堂",
+      "baseTitle": "宠爱QQ堂",
+      "kind": "archive",
+      "kindLabel": "社区文件补档",
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
+      "cover": "community_games/covers/qqtang.png",
+      "swf": "community_games/swf/qqtang.swf",
+      "sourceUrl": "https://github.com/xuemian168/qqpet_automation/blob/main/qq-pet-macos/src/assets/game/%E5%AE%A0%E7%88%B1QQ%E5%A0%82.swf",
+      "assetSource": "Community backup, recovered 2026-10-23; source bytes fixed by SHA-256. See community_games/README.md.",
+      "notes": "社区留存的 SWF，默认传入原宿主初始化参数 sex=2；SWF 字节不改。尚未证明与历史官方原件逐字节一致。",
+      "tags": [
+        "社区补档",
+        "QQ宠物",
+        "固定版本",
+        "本地 SWF"
+      ],
+      "sizeBytes": 981342,
+      "sha256": "c8b38507e58d1d0b9aedcdd356c91b5638333253654c6508ab505161e5c9630a",
+      "parameters": {
+        "sex": "2"
+      }
+    },
+    {
+      "id": "happy-dungeon",
+      "title": "地下城与勇士 · Q宠版",
+      "baseTitle": "地下城与勇士 · Q宠版",
+      "kind": "archive",
+      "kindLabel": "社区文件补档",
+      "status": "playable",
+      "statusLabel": "可运行",
+      "playable": true,
+      "cover": "community_games/covers/dungeon.png",
+      "swf": "community_games/swf/dungeon.swf",
+      "sourceUrl": "https://github.com/xuemian168/qqpet_automation/blob/main/qq-pet-macos/src/assets/game/QQ%E5%9C%B0%E4%B8%8B%E5%9F%8E%E4%B8%8E%E5%8B%87%E5%A3%AB%E4%B9%8BQ%E5%AE%A0%E7%89%88.swf",
+      "assetSource": "Community backup, recovered 2026-10-23; source bytes fixed by SHA-256. See community_games/README.md.",
+      "notes": "社区文件名为“QQ地下城与勇士之Q宠版”。历史官方名称及欢乐谷归属尚未确证；此处保留固定版本用于对照，不声称已证实为未修改官方原件。",
+      "tags": [
+        "社区补档",
+        "QQ宠物",
+        "固定版本",
+        "本地 SWF"
+      ],
+      "sizeBytes": 2689767,
+      "sha256": "b6f281f708ebf6342840141b6d3785dedfc26be80d59ef09fcfe0fea596cef48"
     }
   ],
   "experiences": [

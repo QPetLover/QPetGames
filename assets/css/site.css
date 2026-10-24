@@ -563,6 +563,44 @@ input {
   height: 100%;
 }
 
+.player-page-archive .page-heading {
+  padding: 0 0 14px;
+}
+
+.player-page-archive .eyebrow {
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+.player-page-archive .page-heading h1 {
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.player-page-archive .player-shell {
+  align-items: start;
+}
+
+.player-page-archive .player-frame {
+  min-height: 0;
+  padding: 8px;
+}
+
+.player-page-archive #ruffle-container {
+  position: relative;
+  display: block;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 760 / 420;
+}
+
+.player-page-archive .ruffle-container ruffle-player {
+  position: absolute;
+  inset: 0;
+}
+
 .player-side {
   padding: 20px;
   border-radius: var(--radius-lg);

@@ -270,12 +270,13 @@ function renderPlayer(id) {
     view().innerHTML = '<div class="empty-state">这个游戏目前没有可运行资源。<a href="#/games">返回列表</a></div>';
     return;
   }
+  const archive = game.kind === 'archive';
 
   view().innerHTML = `
-    <section class="player-page">
+    <section class="player-page${archive ? ' player-page-archive' : ''}">
       <div class="page-heading">
         <p class="eyebrow"><a href="#/game/${encodeURIComponent(game.id)}">${escapeHtml(game.title)}</a> / Ruffle Player</p>
-        <h1>正在运行<br><span>${escapeHtml(game.title)}</span></h1>
+        ${archive ? `<h1>${escapeHtml(game.title)}</h1>` : `<h1>正在运行<br><span>${escapeHtml(game.title)}</span></h1>`}
       </div>
       <div class="player-shell">
         <div class="player-frame">

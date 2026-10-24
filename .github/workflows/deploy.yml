@@ -29,11 +29,15 @@ jobs:
         with:
           python-version: "3.x"
       - name: Check application syntax
-        run: node --check assets/js/app.js
+        run: |
+          node --check assets/js/app.js
+          node tools/check_original_routes.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build static site
         run: python3 tools/build_static_site.py
+      - name: Check original-only artifact
+        run: python3 tools/check_original_artifact.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

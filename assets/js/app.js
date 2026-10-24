@@ -3,7 +3,15 @@ const SITE = {
   sourceRepo: 'https://github.com/QPetLover/awesome-qpet-games',
   adventureRepo: 'https://github.com/QPetLover/qpet-adventure',
   adventureSite: 'https://qpetlover.cn/qpet-adventure/',
+  nativeSite: 'https://qpetlover.cn/QPetGamesWeb/',
 };
+
+// This independent Ruffle baseline publishes original QQ Pet games only.
+// Keep retired catalog entries out even if an old catalog is cached.
+function isOriginalGame(game) {
+  return (game.kind === 'classic' && /^classic-0(0[1-9]|1[0-6])$/.test(game.id)) ||
+    (game.kind === 'archive' && ['happy-forest', 'happy-qqtang', 'happy-dungeon'].includes(game.id));
+}
 
 const state = {
   data: null,
@@ -89,11 +97,12 @@ function renderHome() {
   view().innerHTML = `
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Flash Archive / Ruffle Ready</p>
+        <p class="eyebrow">原件对照 / Ruffle</p>
         <h1>QQ 宠物<br><span>小游戏</span>馆</h1>
-        <p class="hero-lede">把古早 HTML 页面升级成可检索、可运行、可继续接入 source 仓库的静态小游戏站。冒险岛已经拆到独立仓库，这里专注小游戏和相关体验。</p>
+        <p class="hero-lede">这里保留 QQ 宠物小游戏原件，通过 Ruffle 运行，供试玩与复刻对照。独立 HTML / Canvas / JavaScript 复刻版在 Q宠游戏站；冒险岛另有独立入口。</p>
         <div class="hero-actions">
           <a class="primary-button" href="#/games">进入游戏馆</a>
+          <a class="ghost-button" href="${SITE.nativeSite}" target="_blank" rel="noreferrer">打开原生复刻版</a>
           <a class="ghost-button" href="#/lab">上传 SWF 试跑</a>
           <a class="ghost-button" href="${SITE.sourceRepo}" target="_blank" rel="noreferrer">资源归档</a>
         </div>
@@ -122,7 +131,7 @@ function renderHome() {
       <article class="section-card">
         <p class="eyebrow">Source</p>
         <h2>资源仓库作源头</h2>
-        <p>本仓库通过 submodule 引用 <code>awesome-qpet-games</code>，后续 ChatQPet 发版后可继续替换成更完整的资源源。</p>
+        <p>原始资源与历史版本保存在 <code>awesome-qpet-games</code>；本站只部署原版游戏及已标明来源的社区补档。</p>
         <a class="ghost-button" href="${SITE.sourceRepo}" target="_blank" rel="noreferrer">查看 awesome-qpet-games</a>
       </article>
       <article class="section-card">
@@ -133,9 +142,9 @@ function renderHome() {
       </article>
       <article class="section-card">
         <p class="eyebrow">Ruffle</p>
-        <h2>Flash 安全运行</h2>
-        <p>小游戏通过 Ruffle 运行；无法确认来源的 SWF 会显示补档状态，不再给用户一个必然失败的点击入口。</p>
-        <a class="ghost-button" href="#/games?kind=missing">查看待补档</a>
+        <h2>独立原件对照</h2>
+        <p>本页运行归档 SWF，使用 Ruffle。原生复刻站单独运行 HTML / Canvas / JavaScript，方便对照操作、画面与声音。</p>
+        <a class="ghost-button" href="${SITE.nativeSite}" target="_blank" rel="noreferrer">打开原生复刻站</a>
       </article>
     </section>
   `;
@@ -149,14 +158,13 @@ function renderCatalog() {
     <section class="page-heading">
       <p class="eyebrow">Catalog</p>
       <h1>小游戏<br><span>列表</span></h1>
-      <p>按可运行状态、经典索引、换壳平替筛选。点击卡片进入详情；只有资源已经对齐的游戏会出现运行按钮。</p>
+      <p>收录 ${state.games.length} 款 QQ 宠物原件与社区补档，使用 Ruffle 作独立对照。点击卡片可查看来源和固定版本。</p>
     </section>
     <section class="catalog-tools">
       <input id="game-search" class="search-input" type="search" value="${escapeHtml(state.query)}" placeholder="搜索游戏名、原型或标签">
       <div class="filter-pills" role="tablist" aria-label="游戏筛选">
         ${filterButton('all', '全部')}
         ${filterButton('playable', '可运行')}
-        ${filterButton('reskin', '换壳平替')}
         ${filterButton('classic', '经典索引')}
         ${filterButton('archive', '社区补档')}
         ${filterButton('missing', '待补档')}
@@ -420,7 +428,7 @@ async function init() {
   try {
     const response = await fetch('assets/data/games.json', { cache: 'no-cache' });
     state.data = await response.json();
-    state.games = state.data.games;
+    state.games = state.data.games.filter(isOriginalGame);
     SITE.sourceRepo = state.data.sourceRepository || SITE.sourceRepo;
     SITE.adventureRepo = state.data.adventureRepository || SITE.adventureRepo;
     SITE.adventureSite = state.data.adventureSite || SITE.adventureSite;

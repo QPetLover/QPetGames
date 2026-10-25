@@ -740,3 +740,11 @@ input {
     min-height: 420px;
   }
 }
+
+/* Keep each original-player entry distinct from its native game. */
+.brand-mode{margin-left:8px;font-size:.72rem;font-weight:600;color:var(--ink-soft);letter-spacing:0}
+.card-cover{display:block;text-decoration:none}.catalog-card img,.detail-cover img{object-fit:contain}
+.card-body h3 a{text-decoration:none}.card-body h3 a:hover{text-decoration:underline}
+.card-actions{display:flex;align-items:center;gap:10px;margin-top:18px}.card-actions .card-link{flex:1;width:auto}
+.card-ruffle{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.5);text-decoration:none;font-size:.9rem;white-space:nowrap}
+.card-ruffle:hover{background:#fff}.player-page .page-heading{padding:0 0 14px}.player-page .page-heading h1{font-size:clamp(1.4rem,3.5vw,2.1rem);line-height:1.2;letter-spacing:-.02em}

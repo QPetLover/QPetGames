@@ -288,7 +288,7 @@ function configureRuffle() {
     letterbox: 'on',
     scale: 'showAll',
     forceScale: true,
-    fontSources: [state.data?.fontSource || 'https://qpetlover.cn/qpet-adventure/myfont.swf'],
+    fontSources: [state.data?.fontSource || 'assets/fonts/original-comparison.swf'],
     defaultFonts: {
       sans: ['站酷快乐体2016修订版'],
     },

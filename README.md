@@ -1,3 +1,5 @@
+> 网站已合并至 [Q宠游戏](https://qpetlover.cn/QPetGamesWeb/)。此仓库保留原始资源与历史版本；旧 Pages 仅用于网址跳转，后续网站维护在 [QPetGamesWeb](https://github.com/QPetLover/QPetGamesWeb)。
+
 # QPet Games
 
 QQ 宠物小游戏原件对照站：16 款经典原件与 3 款社区补档，通过 Ruffle 运行归档 SWF。独立 HTML / Canvas / JavaScript 复刻版在 [QPetGamesWeb](https://qpetlover.cn/QPetGamesWeb/)。

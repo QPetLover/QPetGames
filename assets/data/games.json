@@ -3,7 +3,7 @@
   "sourceRepository": "https://github.com/QPetLover/awesome-qpet-games",
   "adventureRepository": "https://github.com/QPetLover/qpet-adventure",
   "adventureSite": "https://qpetlover.cn/qpet-adventure/",
-  "fontSource": "https://qpetlover.cn/qpet-adventure/myfont.swf",
+  "fontSource": "assets/fonts/original-comparison.swf",
   "games": [
     {
       "id": "classic-001",

@@ -1,34 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Q宠小游戏原版对照。已复刻游戏可直接进入统一游戏大厅。">
-  <title>Q宠游戏 · 原版对照</title>
-  <link rel="stylesheet" href="assets/css/site.css?v=40e1150fc2138852">
-</head>
-<body>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="https://qpetlover.cn/QPetGamesWeb/" aria-label="Q宠游戏大厅">
-        <span class="brand-mark">Q</span>
-        <span>Q宠游戏 <span class="brand-mode">原版对照</span></span>
-      </a>
-      <nav class="nav-links" aria-label="主导航">
-        <a class="nav-link" href="https://qpetlover.cn/QPetGamesWeb/">游戏大厅</a>
-        <a class="nav-link" data-nav="games" href="#/games">原版对照</a>
-        <a class="nav-link" href="https://qpetlover.cn/QPetGamesWeb/qpet-adventure/">冒险岛</a>
-      </nav>
-    </header>
-
-    <main id="view" aria-live="polite">
-      <div class="skeleton">正在打开游戏… <a href="https://qpetlover.cn/QPetGamesWeb/">游戏大厅</a></div>
-    </main>
-
-    <footer class="footer">
-      <p>Q宠游戏 · <a href="https://qpetlover.cn/QPetGamesWeb/">返回游戏大厅</a></p>
-    </footer>
-  </div>
-  <script src="assets/js/app.js?v=29532b07ac700451" defer></script>
-</body>
-</html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Q宠游戏</title><link rel="canonical" href="https://qpetlover.cn/QPetGamesWeb/">
+<script>
+const home='https://qpetlover.cn/QPetGamesWeb/';
+const hash=location.hash;
+const destination=/^#\/(?:play|game|games|originals|lab)(?:[/?]|$)/.test(hash)?home+'originals/'+hash:home;
+location.replace(destination);
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://qpetlover.cn/QPetGamesWeb/"></noscript></head><body><p><a href="https://qpetlover.cn/QPetGamesWeb/">进入Q宠游戏</a></p></body></html>

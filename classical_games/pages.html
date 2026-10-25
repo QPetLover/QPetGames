@@ -1,26 +1,5 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>游戏详情 · QPet Games</title>
-</head>
-<body>
-  <p>正在跳转到新版游戏详情...</p>
-  <p><a id="fallback" href="../index.html#/games">返回 QPet Games</a></p>
-  <script>
-    const title = new URLSearchParams(location.search).get('game') || '';
-    fetch('../assets/data/games.json')
-      .then((response) => response.json())
-      .then((data) => {
-        const game = data.games.find((item) => item.title === title || item.baseTitle === title);
-        const target = game ? `../index.html#/game/${encodeURIComponent(game.id)}` : `../index.html#/games?kind=classic&search=${encodeURIComponent(title)}`;
-        document.getElementById('fallback').href = target;
-        location.replace(target);
-      })
-      .catch(() => {
-        location.replace(`../index.html#/games?kind=classic&search=${encodeURIComponent(title)}`);
-      });
-  </script>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Q宠游戏</title><script>
+const base='https://qpetlover.cn/QPetGamesWeb/originals/#/games';
+const title=new URLSearchParams(location.search).get('game')||'';
+location.replace(base+(title?'?search='+encodeURIComponent(title):''));
+</script></head><body><p><a href="https://qpetlover.cn/QPetGamesWeb/">进入Q宠游戏</a></p></body></html>
